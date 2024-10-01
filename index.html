@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Übersicht</title>
+  <style>
+    /* Globales Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Container für Flexbox Beispiele */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Box Styling */
+    .box {
+      width: 150px;
+      height: 100px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .box1 { background-color: lightcoral; }
+    .box2 { background-color: lightblue; }
+    .box3 { background-color: lightgreen; }
+
+    /* Flexbox Layout Beispiel */
+    .example {
+      margin-bottom: 40px;
+    }
+
+    /* Spezifische Flexbox Einstellungen für die Beispiele */
+    .flex-direction-row {
+      flex-direction: row;
+    }
+
+    .flex-direction-column {
+      flex-direction: column;
+    }
+
+    .justify-content-space-between {
+      justify-content: space-between;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-grow-example .box1 { flex-grow: 1; }
+    .flex-grow-example .box2 { flex-grow: 2; }
+    .flex-grow-example .box3 { flex-grow: 1; }
+
+    .flex-shrink-example .box1 { flex-shrink: 1; }
+    .flex-shrink-example .box2 { flex-shrink: 2; }
+    .flex-shrink-example .box3 { flex-shrink: 1; }
+
+    .align-self-example .box2 { align-self: flex-end; }
+  </style>
+</head>
+<body>
+  <h1>Flexbox Übersicht</h1>
+
+  <h2>1. <code>flex-direction</code></h2>
+  <div class="container example flex-direction-row">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>flex-direction: row;</code> (Standardwert, Boxen sind horizontal angeordnet)</p>
+
+  <div class="container example flex-direction-column">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>flex-direction: column;</code> (Boxen sind vertikal angeordnet)</p>
+
+  <h2>2. <code>justify-content</code></h2>
+  <div class="container example justify-content-space-between">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>justify-content: space-between;</code> (Boxen sind mit Abstand dazwischen verteilt)</p>
+
+  <h2>3. <code>align-items</code></h2>
+  <div class="container example align-items-center">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>align-items: center;</code> (Boxen sind vertikal in der Mitte des Containers)</p>
+
+  <h2>4. <code>flex-wrap</code></h2>
+  <div class="container example flex-wrap">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box1">Box 4</div>
+    <div class="box box2">Box 5</div>
+  </div>
+  <p>Hier: <code>flex-wrap: wrap;</code> (Boxen brechen um, wenn der Platz nicht ausreicht)</p>
+
+  <h2>5. <code>flex-grow</code></h2>
+  <div class="container example flex-grow-example">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>flex-grow</code> (Box 2 wächst doppelt so stark wie die anderen Boxen)</p>
+
+  <h2>6. <code>flex-shrink</code></h2>
+  <div class="container example flex-shrink-example">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>flex-shrink</code> (Box 2 schrumpft doppelt so stark wie die anderen Boxen)</p>
+
+  <h2>7. <code>align-self</code></h2>
+  <div class="container example align-self-example">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <p>Hier: <code>align-self: flex-end;</code> (Box 2 ist unten ausgerichtet, unabhängig von den anderen)</p>
+
+</body>
+</html>
